@@ -1,0 +1,33 @@
+.phonebook_label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contact_list_container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact_list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 550px;
+}
+.contact_list_item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+}
+.delete_btn {
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+}

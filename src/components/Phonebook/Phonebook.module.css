@@ -1,0 +1,10 @@
+.phonebook_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.phonebook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
