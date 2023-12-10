@@ -28,14 +28,11 @@ export const RegistrationPage = () => {
       );
 
       console.log('Registration successful:', registrationResponse.data);
-
-      // Assuming the backend returns a JWT upon successful registration
+      
       const token = registrationResponse.data.token;
-
-      // Store the JWT in localStorage
+     
       localStorage.setItem('authToken', token);
 
-      // Navigate to a protected route
       navigate('/contacts');
     } catch (error) {
       console.error('Registration error:', error);
