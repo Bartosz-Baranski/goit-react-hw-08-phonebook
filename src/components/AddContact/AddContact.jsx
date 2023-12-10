@@ -1,17 +1,19 @@
-import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import {
+  saveContact,
+  deleteContact,
+  fetchContacts,
+} from '../redux/contactSlice';
 
-import { ContactForm } from 'components/ContactForm/ContactForm';
-import { ContactList } from 'components/ContactList/ContactList';
-import { fetchContacts, saveContact, deleteContact } from '../redux/operations';
+import ContactForm from 'components/ContactForm/ContactForm';
+import ContactList from 'components/ContactList/ContactList';
 
-import css from './Phonebook.module.css';
+import css from './AddContact.module.css';
 
-export function Phonebook() {
+const AddContact = () => {
   const contacts = useSelector(state => state.contacts);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
@@ -25,15 +27,14 @@ export function Phonebook() {
   };
 
   return (
-    <div className={css.phonebook_box}>
-      <div className={css.phonebook}>
+    <div className={css.wrapper}>
+      <div className={css.phoneBook}>
+        <h1>Phonebook</h1>
         <ContactForm addContact={handleAddContact} />
       </div>
       <ContactList contacts={contacts} deleteContact={handleDeleteContact} />
     </div>
   );
-}
-
-Phonebook.propTypes = {
-  contacts: PropTypes.array,
 };
+
+export default AddContact;

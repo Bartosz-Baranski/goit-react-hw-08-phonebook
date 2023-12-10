@@ -27,7 +27,7 @@ Project is created with:
 
 ## Setup
 
-To run this project, install it locally using npm:
+<!-- To run this project, install it locally using npm:
 
 ```
 npm install
@@ -57,4 +57,4 @@ Save phone book in local storage
 ## Project Status
 
 Project is in progress. Link to project:
-https://bartosz-baranski.github.io/goit-react-hw-08-phonebook/
+https://bartosz-baranski.github.io/goit-react-hw-08-phonebook/ -->
